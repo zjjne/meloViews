@@ -1,0 +1,6 @@
+<manifest package="com.goteny.melo.views"
+          xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <application />
+
+</manifest>
