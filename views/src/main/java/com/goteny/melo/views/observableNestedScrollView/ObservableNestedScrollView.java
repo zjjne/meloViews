@@ -169,9 +169,9 @@ public class ObservableNestedScrollView extends NestedScrollView
     /**
      * 滑动过程中，无论是否越界，此方法会一直被调用（若要判断是否越界，可用下面参数clampedX或clampedY判定）
      * 手指离开屏幕后就不会被执行
-     * @param scrollX
+     * @param scrollX 与scrollY同理
      * @param scrollY Y轴方向的滚动距离（即【此View当前屏幕可见部分的顶部】到【此View自身顶部】的距离）
-     * @param clampedX
+     * @param clampedX 与clampedY同理
      * @param clampedY 当Y轴拖动越界时clampedY会为true（只有在手指滑动过程中的越界才会为true。
      *                 在快速滑动手指离开屏幕后，view自动滚动到底部而出现的回弹效果，不算越界，此值不会变为true）
      */
