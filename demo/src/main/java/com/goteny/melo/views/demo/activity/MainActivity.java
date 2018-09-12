@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v)
     {
-        LogMelo.i(getClass().getSimpleName(), "onClick()");
+        LogMelo.i("onClick()");
 
     }
 }

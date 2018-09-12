@@ -2,4 +2,4 @@
 android custom views
 
 # use
-    compile 'com.goteny.melo:views:1.0.1'
+    compile 'com.goteny.melo:views:1.0.2'

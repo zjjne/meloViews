@@ -1,6 +1,7 @@
 package com.goteny.melo.views.observableNestedScrollView;
 
 import android.content.Context;
+import android.support.annotation.CallSuper;
 import android.support.v4.view.MotionEventCompat;
 import android.support.v4.widget.NestedScrollView;
 import android.util.AttributeSet;
@@ -64,6 +65,7 @@ public class ObservableNestedScrollView extends NestedScrollView
 
 
 
+    @CallSuper
     @Override
     public boolean onTouchEvent(MotionEvent ev)
     {
@@ -87,11 +89,11 @@ public class ObservableNestedScrollView extends NestedScrollView
         }
 
 
-        LogMelo.i(getClass().getSimpleName(), "-----------currentY: " + currentY);
+        LogMelo.i("-----------currentY: " + currentY);
 
         if (isClampedY)
         {
-            LogMelo.i(getClass().getSimpleName(), "isFirstClampedY: " + isFirstClampedY);
+            LogMelo.i("isFirstClampedY: " + isFirstClampedY);
 
             isCalledEndedCallback = false;
 
@@ -105,13 +107,13 @@ public class ObservableNestedScrollView extends NestedScrollView
             float distanceY = currentY - downY;                             //滑动的长度
             boolean isScrollUp = (distanceY < 0);                           //向上滑动时，Y的变化值(即滑动距离)为负数
 
-            LogMelo.i(getClass().getSimpleName(), "--------------------------------------------------");
-            LogMelo.i(getClass().getSimpleName(), "firstClampedY: " + firstClampedY);
-            LogMelo.i(getClass().getSimpleName(), "origin clampedDistanceY: " + clampedDistanceY);
-            LogMelo.i(getClass().getSimpleName(), "currentY: " + currentY);
-            LogMelo.i(getClass().getSimpleName(), "upY: " + upY);
-            LogMelo.i(getClass().getSimpleName(), "downY: " + downY);
-            LogMelo.i(getClass().getSimpleName(), "distanceY: " + distanceY);
+            LogMelo.i("--------------------------------------------------");
+            LogMelo.i("firstClampedY: " + firstClampedY);
+            LogMelo.i("origin clampedDistanceY: " + clampedDistanceY);
+            LogMelo.i("currentY: " + currentY);
+            LogMelo.i("upY: " + upY);
+            LogMelo.i("downY: " + downY);
+            LogMelo.i("distanceY: " + distanceY);
 
             if (mOnOverScrolledListener != null)
             {
@@ -135,13 +137,13 @@ public class ObservableNestedScrollView extends NestedScrollView
                 float distanceY = currentY - downY;                             //滑动的长度
                 boolean isScrollUp = (distanceY < 0);                           //向上滑动时，Y的变化值(即滑动距离)为负数
 
-                LogMelo.i(getClass().getSimpleName(), "--------------------------------------------------");
-                LogMelo.i(getClass().getSimpleName(), "firstClampedY: " + firstClampedY);
-                LogMelo.i(getClass().getSimpleName(), "origin clampedDistanceY: " + clampedDistanceY);
-                LogMelo.i(getClass().getSimpleName(), "currentY: " + currentY);
-                LogMelo.i(getClass().getSimpleName(), "upY: " + upY);
-                LogMelo.i(getClass().getSimpleName(), "downY: " + downY);
-                LogMelo.i(getClass().getSimpleName(), "distanceY: " + distanceY);
+                LogMelo.i("--------------------------------------------------");
+                LogMelo.i("firstClampedY: " + firstClampedY);
+                LogMelo.i("origin clampedDistanceY: " + clampedDistanceY);
+                LogMelo.i("currentY: " + currentY);
+                LogMelo.i("upY: " + upY);
+                LogMelo.i("downY: " + downY);
+                LogMelo.i("distanceY: " + distanceY);
 
                 if (mOnOverScrolledListener != null)
                 {
@@ -175,6 +177,7 @@ public class ObservableNestedScrollView extends NestedScrollView
      * @param clampedY 当Y轴拖动越界时clampedY会为true（只有在手指滑动过程中的越界才会为true。
      *                 在快速滑动手指离开屏幕后，view自动滚动到底部而出现的回弹效果，不算越界，此值不会变为true）
      */
+    @CallSuper
     @Override
     protected void onOverScrolled(int scrollX, int scrollY, boolean clampedX, boolean clampedY)
     {

@@ -4,13 +4,13 @@ apply plugin: 'com.novoda.bintray-release'
 android {
     compileSdkVersion 25
     buildToolsVersion "25.0.2"
-    publishNonDefault true      //发布多种aar，包括debug和release等
+//    publishNonDefault true      //发布多种aar，包括debug和release等
 
     defaultConfig {
         minSdkVersion 14
         targetSdkVersion 25
-        versionCode 17110214
-        versionName "1.0.1"
+        versionCode 18091214
+        versionName "1.0.2"
     }
 
     buildTypes {
@@ -24,7 +24,7 @@ android {
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     compile 'com.android.support:support-v4:25.3.1'
-    compile 'com.goteny.melo:utils:0.0.3'
+    compile 'com.goteny.melo:utils:0.0.6'
 }
 
 
